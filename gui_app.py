@@ -88,7 +88,7 @@ def take_review():
 
 
 def estimate(s):
-    with open('cvmodel','rb') as f:
+    with open('cv','rb') as f:
         cv=pickle.load(f)
     with open('lgmodel','rb') as f:
         model=pickle.load(f)
@@ -116,7 +116,7 @@ def estimate(s):
             if variables[i].get() == 1:
                 selected_foods.append(foods[i])
         #print(selected_foods)
-        conn=pymysql.connect(user='root',password='Python@123',
+        conn=pymysql.connect(user='root',password='Sukanya@9299',
                              host='localhost',database='projectdb')
         qur='select * from reviews_table'
         mycur=conn.cursor()
